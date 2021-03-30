@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <RadioGroup
+                android:id="@+id/cmRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cmRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国移动"
+                    android:checked="true"
+                    tools:layout_editor_absoluteX="51dp"
+                    tools:layout_editor_absoluteY="48dp" />
+
+                <RadioButton
+                    android:id="@+id/cuRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国联通"
+                    tools:layout_editor_absoluteX="170dp"
+                    tools:layout_editor_absoluteY="48dp" />
+
+                <RadioButton
+                    android:id="@+id/ctRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国电信"
+                    tools:layout_editor_absoluteX="302dp"
+                    tools:layout_editor_absoluteY="48dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="320dp"
+                android:layout_height="140dp"
+                android:width="1dp"
+                android:background="#1AA9A9A9"
+                android:layout_marginTop="10dp"
+                android:text="会话标识（长按可复制）"
+                android:textIsSelectable="true" />
+
+            <EditText
+                android:id="@+id/mobileText"
+                android:layout_width="320dp"
+                android:layout_height="47dp"
+                android:background="#1A6495ED"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号码"
+                android:inputType="number"
+                android:visibility="gone"
+                android:selectAllOnFocus="true"
+                android:textColorHint="#FF999999"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:background="#1AA9A9A9"
+                android:text="验真结果"
+                android:visibility="gone"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="320dp"
+                android:layout_height="47dp"
+                android:background="#1A6495ED"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:hint="APPID"
+                android:text="cff0f35c21f8425cbee844cd329651a6"
+                android:selectAllOnFocus="true"
+                android:textColorHint="#FF999999"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="320dp"
+                android:layout_height="47dp"
+                android:background="#1A6495ED"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:hint="APPKEY"
+                android:text="9qpkn6hpk9wecwzo"
+                android:selectAllOnFocus="true"
+                android:textColorHint="#FF999999"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="320dp"
+                android:layout_height="47dp"
+                android:background="#1A6495ED"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:hint="CUSTID"
+                android:visibility="gone"
+                android:selectAllOnFocus="true"
+                android:textColorHint="#FF999999"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="preAuth"
+                    android:layout_marginRight="40dp"
+                    android:text="会话标识" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="gone"
+                    android:onClick="validate"
+                    android:text="验真" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

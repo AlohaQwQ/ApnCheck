@@ -1,0 +1,3 @@
+include ':IMSIAUTHSDK'
+include ':app'
+rootProject.name='ApnCheck'
